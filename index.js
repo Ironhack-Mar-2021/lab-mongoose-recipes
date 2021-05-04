@@ -29,7 +29,14 @@ mongoose
       creator: "Cynthia",
       cuisine: "Italian",
     })
+
+      .then(() => {
+        return Recipe.insertMany(data)
+      })
   })
+
+
+
   .catch(error => {
     console.error('Error connecting to the database', error);
   });
